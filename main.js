@@ -8,19 +8,14 @@ function initialize(){
 
 //what about using OR operator with IF
 //tried a while loop, but was infinite for some reason
+//tried match
 
-    if(raw.charAt(0) === 'a'){
-      pig = raw + "-way";
-    }else if(raw.charAt(0) === 'e'){
-      pig = raw + "-way";
-    }else if(raw.charAt(0) === 'i'){
-      pig = raw + "-way";
-    }else if(raw.charAt(0) === 'o'){
-      pig = raw + "-way";
-    }else if(raw.charAt(0) === 'u'){
+    var first = raw.charAt(0);
+
+    if(first === 'a' || first === 'e' || first === 'i' || first === 'o' || first === 'u'){
       pig = raw + "-way";
     }else{
-      pig = raw.substring(1, raw.length) + '-' + raw.charAt(0) + 'ay';
+      pig = raw.substring(1, raw.length) + '-' + first + 'ay';
     }
     $('#pig').val(pig);
   })
